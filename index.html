@@ -9,7 +9,7 @@ ACDPhotoTool
 <script type="text/javascript">
 
     window.onAmazonLoginReady = function() {
-      amazon.Login.setClientId('YOUR-CLIENT-ID');
+      amazon.Login.setClientId('amzn1.application-oa2-client.bd875f50d6b04712806d9704ced9190a');
     };
     (function(d) {
       var a = d.createElement('script'); a.type = 'text/javascript';
@@ -24,5 +24,15 @@ ACDPhotoTool
         src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
         width="156" height="32" />
  </a>
+ <script type="text/javascript">
+
+    document.getElementById('LoginWithAmazon').onclick = function() {
+    options = { scope : 'profile' };
+    amazon.Login.authorize(options,
+        'https://bmcgough.github.io/ACDPhotoTool/login.html');
+    return false;
+    };
+
+ </script>
 </body>
 </html>
